@@ -42,6 +42,55 @@ NOTE: cntr+C is recommended after each command since terminal does not automatic
 - ```slingshot --suggest [keyword prefix]```: calls the search function -> if prefix exists, returns a list of suggested keywords on each line
 - ```slingshot --display```: displays a list of objects, in form of "[reference #]: {[key]:[value]...}" on each line
 
+## Testing Suite
+input: ```slingshot --add hello```
+
+output: successfully added
+
+input: ```slingshot --display```
+
+output:
+
+0: { h: 1, isEnd: false }
+
+1: { e: 2, isEnd: false }
+
+2: { isEnd: false, l: 3 }
+
+3: { isEnd: false, l: 4 }
+
+4: { isEnd: false, o: 5 }
+
+5: { isEnd: true }
+
+input: ```slingshot --add heo```
+
+output: successfully added
+
+input: ```slingshot --search heo```
+
+output: has keyword [True]
+
+input: ```slingshot --delete heo```
+
+output:
+
+has keyword [True]
+
+successfully deleted
+
+input: ```slingshot --search heo```
+
+output: does not have keyword [False] | has prefix [True]
+
+input: ```slingshot --suggest h```
+
+ouput:
+
+does not have keyword [False] | has prefix [True]
+
+hello
+
 ## CLI-Server Interaction
 
 - Server database example (keywords = "hi", "b"). 
