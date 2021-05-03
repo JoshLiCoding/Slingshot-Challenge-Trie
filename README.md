@@ -9,7 +9,7 @@ To integrate CLI, I followed parts of this [blog](https://www.twilio.com/blog/ho
 
 Since I was already familiar with Firebase Realtime Database (which by nature has 1 global state), I sought to implement an object-based tree structure on the platform through the use of references
 
-My Javascript program makes use of a great amount of asynchronous functions for Firebase queries, which I had little real previous experience with
+My Javascript program makes use of a great amount of asynchronous functions for Firebase queries, something I became familiarized with during this challenge
 
 Lastly, various sources consulted were cited as necessary in code comments
 
