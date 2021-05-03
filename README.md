@@ -28,9 +28,13 @@ To integrate CLI, I followed parts of this [blog](https://www.twilio.com/blog/ho
 
 Since I was already familiar with Firebase Realtime Database (which by nature has 1 global state), I sought to implement an object-based tree structure on the platform through references. This will be discussed later below
 
+My Javascript program makes use of a great amount of asynchronous functions for Firebase queries, which I had little real previous experience with
+
 Lastly, various sources consulted were cited as necessary in code comments
 
 ## CLI
+
+NOTE: cntr+C is recommended after each command since terminal does not automatically return a new line
 
 - ```slingshot --add [keyword]```: adds the keyword, returns "successfully added"
 - ```slingshot --delete [keyword]```: calls the search function -> if keyword exists, deletes the keyword and returns "successfully deleted" / else return "cannot delete keyword"
@@ -62,7 +66,7 @@ slingshot
 
 - ADD function pseudocode:
 ```
-for(every letter in node){
+for(every letter in keyword){
   if(letter already contained in current reference)
     get {letter, next reference}, move to next reference
   else{
@@ -72,11 +76,62 @@ for(every letter in node){
     move on to new reference
   }
   
-  if(last letter in node)
+  if(last letter in keyword)
     set next/new reference {isEnd = true}
 }
 ```
+- DELETE function pseudocode (note that since this function does not remove "deleted" keywords, storage-wise it may be inefficient):
+```
+call search(keyword), if keyword exists:
+for(every letter in keyword){
+  get {letter, next reference}, move to next reference
+  
+  if(last letter in node)
+    set next/new reference {isEnd = false}
+}
+```
+- SEARCH function pseudocode
+```
+for(every letter in keyword){
+  if(letter already contained in current reference)
+    get {letter, next reference}, move to next reference
+  else{
+    return False for keyword
+  }
+  
+  if(last letter in node){
+    get next/new reference
+    if(isEnd)
+      return True for keyword
+    else
+      return False for keyword, True for prefix
+  }
+}
+```
+- SUGGEST function pseudocode
+```
+call search(prefix), if keyword/prefix exists:
 
+loop until the reference for the last letter of prefix
+
+perform DFS, declare 2 list[] for references and prefixes
+while(!list not empty){
+  poll both lists
+  if(isEnd)
+    print <current prefix>
+    
+  for(nodes in current reference){
+    put next reference in list
+    put current prefix + node letter in other list
+  }
+}
+```
+- DISPLAY function pseudocode
+```
+for(repository in database){
+   print <repository #>: <{all key-value pairs}>
+}
+```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
