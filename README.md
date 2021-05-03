@@ -65,5 +65,5 @@ ouput:
 ## Errors & Edge Cases
 
 - CAN handle deleting keywords and suggesting prefixes that do not exist
-- CAN handle multiple clients, but will process both simultaneously instead of maintaining the integrity of operations
+- CAN handle multiple clients, but will process simultaneously instead of maintaining the integrity of operations
 - CANNOT handle special characters from this [StackOverflow thread](https://stackoverflow.com/questions/19132867/adding-firebase-data-dots-and-forward-slashes)
