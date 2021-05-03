@@ -32,7 +32,11 @@ Lastly, various websites consulted were cited as necessary in code comments
 
 ## Functions
 
-- ```--add [keyword]```: adds the keyword, returns "successfully added" if successful
+-```slingshot --add [keyword]```: adds the keyword, returns "successfully added" if successful
+- ```slingshot --delete [keyword]```: calls the search function -> if keyword exists, deletes the keyword and returns "successfully deleted"; otherwise returns "cannot delete keyword"
+- ```slingshot --search [keyword]```: searches for the keyword, returns "has keyword [True]" if successful and "does not have keyword [False]" if not (also returns "does not have keyword [False] | has prefix [True]" if prefixes exists but keyword does not, used for suggest function)
+- ```slingshot --suggest [keyword prefix]```: calls the search function -> if prefix exists, returns a list of suggested keywords
+- ```slingshot --display```: displays in form of "[reference #]: {[key]:[value]...}"
 
 
 ## Contributing
