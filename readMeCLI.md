@@ -20,6 +20,6 @@ NOTE: cntr+C is recommended after each command since terminal does not automatic
 
 - ```slingshot --add [keyword]```: adds the keyword, returns "successfully added"
 - ```slingshot --delete [keyword]```: calls the search function -> if keyword exists, deletes the keyword and returns "successfully deleted" / else return "cannot delete keyword"
-- ```slingshot --search [keyword]```: searches for the keyword, returns "has keyword [True]" if exists / "does not have keyword [False]" if not. In addition, returns "does not have keyword [False] | has prefix [True]" if prefix exists but keyword does not - in context, this is interpretted as False.
+- ```slingshot --search [keyword]```: searches for the keyword, returns "has keyword [True]" if exists / "does not have keyword [False]" if not. In addition, returns "does not have keyword [False] | has prefix [True]" if prefix MAY exist but keyword does not - in context, this is interpretted as False.
 - ```slingshot --suggest [keyword prefix]```: calls the search function -> if prefix exists, returns a list of suggested keywords on each line
 - ```slingshot --display```: displays a list of objects, in form of "[reference #]: {[key]:[value]...}" on each line
