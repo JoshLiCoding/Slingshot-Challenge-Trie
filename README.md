@@ -1,10 +1,6 @@
 # slingshot
 Submission for the Slingshot Challenge. Joshua Li, Upper Canada College G11 Student
 
-## Server
-The server is hosted on [Firebase Realtime Databse](https://console.firebase.google.com/u/0/project/slingshot-312422/database/slingshot-312422-default-rtdb/data)
-
-I have added info@slingshotmentoring.com as an editor
 
 ## Installation
 
