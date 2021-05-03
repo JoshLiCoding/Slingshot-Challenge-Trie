@@ -51,17 +51,17 @@ input: ```slingshot --display```
 
 output:
 
-0: { h: 1, isEnd: false }
+   0: { h: 1, isEnd: false }
 
-1: { e: 2, isEnd: false }
+   1: { e: 2, isEnd: false }
 
-2: { isEnd: false, l: 3 }
+   2: { isEnd: false, l: 3 }
 
-3: { isEnd: false, l: 4 }
+   3: { isEnd: false, l: 4 }
 
-4: { isEnd: false, o: 5 }
+   4: { isEnd: false, o: 5 }
 
-5: { isEnd: true }
+   5: { isEnd: true }
 
 input: ```slingshot --add heo```
 
@@ -75,9 +75,9 @@ input: ```slingshot --delete heo```
 
 output:
 
-has keyword [True]
+   has keyword [True]
 
-successfully deleted
+   successfully deleted
 
 input: ```slingshot --search heo```
 
@@ -87,9 +87,9 @@ input: ```slingshot --suggest h```
 
 ouput:
 
-does not have keyword [False] | has prefix [True]
+   does not have keyword [False] | has prefix [True]
 
-hello
+   hello
 
 ## CLI-Server Interaction
 
