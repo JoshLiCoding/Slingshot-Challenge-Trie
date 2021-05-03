@@ -47,8 +47,8 @@ NOTE: cntr+C is recommended after each command since terminal does not automatic
 - Server database example (keywords = "hi", "b"). 
    - References: objects with a common sequence of letters (e.g. 0, 1, 2...)
    - Nodes: contained within references, made up of key-value pairs
-    - 1) key = the next letter (e.g. h, b, i) | value = the reference to the next letter (1, 2, 3...)
-    - 2) key = "isEnd" | value = is the current sequence of letters a keyword? true: false
+    1) key = the next letter (e.g. h, b, i) | value = the reference to the next letter (1, 2, 3...)
+    2) key = "isEnd" | value = is the current sequence of letters a keyword? true: false
 ```
 slingshot
       |___ 0
@@ -90,7 +90,7 @@ for(every letter in keyword){
     set next/new reference {isEnd = false}
 }
 ```
-- SEARCH function pseudocode
+- SEARCH function pseudocode:
 ```
 for(every letter in keyword){
   if(letter already contained in current reference)
@@ -108,7 +108,7 @@ for(every letter in keyword){
   }
 }
 ```
-- SUGGEST function pseudocode
+- SUGGEST function pseudocode:
 ```
 call search(prefix), if keyword/prefix exists:
 
@@ -126,13 +126,10 @@ while(!list not empty){
   }
 }
 ```
-- DISPLAY function pseudocode
+- DISPLAY function pseudocode:
 ```
 for(repository in database){
    print <repository #>: <{all key-value pairs}>
 }
 ```
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+## Errors & Edge Cases
