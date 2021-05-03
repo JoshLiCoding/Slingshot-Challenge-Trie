@@ -1,5 +1,5 @@
 # slingshot
-Submission for the Slingshot Challenge
+Submission for the Slingshot Challenge. Joshua Li, Upper Canada College G11 Student
 
 ## Server
 The server is hosted on [Firebase Realtime Databse](https://console.firebase.google.com/u/0/project/slingshot-312422/database/slingshot-312422-default-rtdb/data)
@@ -133,3 +133,6 @@ for(repository in database){
 }
 ```
 ## Errors & Edge Cases
+
+- CAN handle deleting keywords and suggesting prefixes that do not exist
+- CANNOT handle special characters from this [StackOverflow thread](https://stackoverflow.com/questions/19132867/adding-firebase-data-dots-and-forward-slashes)
