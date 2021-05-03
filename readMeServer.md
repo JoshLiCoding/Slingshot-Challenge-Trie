@@ -90,7 +90,7 @@ while(!list not empty){
 ```
 - DISPLAY function pseudocode:
 ```
-for(repository in database){
-   print <repository #>: <{all key-value pairs}>
+for(references in database){
+   print <reference #>: <{all key-value pairs}>
 }
 ```
