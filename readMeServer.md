@@ -48,7 +48,7 @@ call search(keyword), if keyword exists:
 for(every letter in keyword){
   get {letter, next reference}, move to next reference
   
-  if(last letter in node)
+  if(last letter in keyword)
     set next/new reference {isEnd = false}
 }
 ```
