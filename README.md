@@ -26,18 +26,56 @@ The general data structure of Trie was inspired by this [video](https://www.yout
 
 To integrate CLI, I followed parts of this [blog](https://www.twilio.com/blog/how-to-build-a-cli-with-node-js). It heavily influenced the installation guide and most files with the exception of main.js
 
-Since I was already familiar with Firebase Realtime Database (which by nature has 1 global state), I sought to implement an object-based tree structure on the platform through references. This will be discussed later below.
+Since I was already familiar with Firebase Realtime Database (which by nature has 1 global state), I sought to implement an object-based tree structure on the platform through references. This will be discussed later below
 
-Lastly, various websites consulted were cited as necessary in code comments
+Lastly, various sources consulted were cited as necessary in code comments
 
-## Functions
+## CLI
 
--```slingshot --add [keyword]```: adds the keyword, returns "successfully added" if successful
-- ```slingshot --delete [keyword]```: calls the search function -> if keyword exists, deletes the keyword and returns "successfully deleted"; otherwise returns "cannot delete keyword"
-- ```slingshot --search [keyword]```: searches for the keyword, returns "has keyword [True]" if successful and "does not have keyword [False]" if not (also returns "does not have keyword [False] | has prefix [True]" if prefixes exists but keyword does not, used for suggest function)
-- ```slingshot --suggest [keyword prefix]```: calls the search function -> if prefix exists, returns a list of suggested keywords
-- ```slingshot --display```: displays in form of "[reference #]: {[key]:[value]...}"
+- ```slingshot --add [keyword]```: adds the keyword, returns "successfully added"
+- ```slingshot --delete [keyword]```: calls the search function -> if keyword exists, deletes the keyword and returns "successfully deleted" / else return "cannot delete keyword"
+- ```slingshot --search [keyword]```: searches for the keyword, returns "has keyword [True]" if exists / "does not have keyword [False]" if not. In addition, returns "does not have keyword [False] | has prefix [True]" if prefix exists but keyword does not - in context, this is interpretted as False.
+- ```slingshot --suggest [keyword prefix]```: calls the search function -> if prefix exists, returns a list of suggested keywords on each line
+- ```slingshot --display```: displays a list of objects, in form of "[reference #]: {[key]:[value]...}" on each line
 
+## CLI-Server Interaction
+
+- Server database example (keywords = "hi", "b"). 
+   - References: objects with a common sequence of letters (e.g. 0, 1, 2...)
+   - Nodes: contained within references, made up of key-value pairs
+    - 1) key = the next letter (e.g. h, b, i) | value = the reference to the next letter (1, 2, 3...)
+    - 2) key = "isEnd" | value = is the current sequence of letters a keyword? true: false
+```
+slingshot
+      |___ 0
+           |___ h: 1
+           |___ b: 3
+           |___ isEnd: false
+      |____1
+           |___ i: 2
+           |___ isEnd: false
+      |____2
+           |___ isEnd: true
+      |____3
+           |___ isEnd: true
+```
+
+- ADD function pseudocode:
+```
+for(every letter in node){
+  if(letter already contained in current reference)
+    get {letter, next reference}, move to next reference
+  else{
+    put letter in current reference
+    get (# of total references + 1)
+    create new reference = (# of total references + 1), {isEnd = false}
+    move on to new reference
+  }
+  
+  if(last letter in node)
+    set next/new reference {isEnd = true}
+}
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
