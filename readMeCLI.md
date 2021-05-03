@@ -8,7 +8,7 @@ Open terminal within the slingshot folder (inside of slingshot-main)
 
 Enter the following into terminal:
 ```zsh
-$ npm init (press enter to confirm prompts)
+$ npm init //(press enter to confirm prompts)
 $ npm install esm
 $ npm link
 ```
