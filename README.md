@@ -7,7 +7,7 @@ The general data structure of Trie was inspired by this [video](https://www.yout
 
 To integrate CLI, I followed parts of this [blog](https://www.twilio.com/blog/how-to-build-a-cli-with-node-js). It heavily influenced the installation guide and most files with the exception of main.js
 
-Since I was already familiar with Firebase Realtime Database (which by nature has 1 global state), I sought to implement an object-based tree structure on the platform through references. This will be discussed later below
+Since I was already familiar with Firebase Realtime Database (which by nature has 1 global state), I sought to implement an object-based tree structure on the platform through the use of references
 
 My Javascript program makes use of a great amount of asynchronous functions for Firebase queries, which I had little real previous experience with
 
