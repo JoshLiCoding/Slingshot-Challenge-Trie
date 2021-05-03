@@ -12,7 +12,7 @@ $ npm init //(press enter to confirm prompts)
 $ npm install esm
 $ npm link
 ```
-Note that the size of the folder will increase to ~200MB after this operation
+Note that the size of the folder will increase to ~200MB after installation
 
 ## Use
 
