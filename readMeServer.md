@@ -61,7 +61,7 @@ for(every letter in keyword){
     return False for keyword
   }
   
-  if(last letter in node){
+  if(last letter in keyword){
     get next/new reference
     if(isEnd)
       return True for keyword
