@@ -1,5 +1,5 @@
 # slingshot
-Submission for the Slingshot Challenge. Joshua Li, Upper Canada College G11 Student
+Submission for the Slingshot Challenge. Joshua Li, Upper Canada College G12 Student
 
 ## Thought Process
 
