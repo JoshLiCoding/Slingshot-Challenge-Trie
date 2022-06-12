@@ -7,7 +7,7 @@ I was given the task to create a trie system that is hosted online with a global
 4. Return list of autocomplete suggestion based on an input prefix
 5. Display the trie
 
-I satisfactorily completed such task. See readmeCLI.md and readMeServer.md to learn more
+I satisfactorily completed such a task. See readmeCLI.md and readMeServer.md to learn more
 
 ## Inspirations
 
