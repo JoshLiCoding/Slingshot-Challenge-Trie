@@ -7,6 +7,8 @@ I was given the task to create a trie system that is hosted online with a global
 4. Return list of autocomplete suggestion based on an input prefix
 5. Display the trie
 
+I satisfactorily completed such task. See readmeCLI.md and readMeServer.md to learn more
+
 ## Inspirations
 
 The general data structure of Trie was inspired by this [video](https://www.youtube.com/watch?v=AXjmTQ8LEoI) (stopping before the Java implementation at the end)
