@@ -20,13 +20,13 @@ My Javascript program makes use of a great amount of asynchronous functions for 
 Lastly, various sources consulted were cited as necessary in code comments
 
 ## Testing Suite
-input: ```slingshot --add hello```
+**input:** ```slingshot --add hello```
 
-output: successfully added
+**output:** successfully added
 
-input: ```slingshot --display```
+**input:** ```slingshot --display```
 
-output:
+**output:**
 
    0: { h: 1, isEnd: false }
 
@@ -40,29 +40,29 @@ output:
 
    5: { isEnd: true }
 
-input: ```slingshot --add heo```
+**input:** ```slingshot --add heo```
 
-output: successfully added
+**output**: successfully added
 
-input: ```slingshot --search heo```
+**input:** ```slingshot --search heo```
 
-output: has keyword [True]
+**output:** has keyword [True]
 
-input: ```slingshot --delete heo```
+**input:** ```slingshot --delete heo```
 
-output:
+**output:**
 
    has keyword [True]
 
    successfully deleted
 
-input: ```slingshot --search heo```
+**input:** ```slingshot --search heo```
 
-output: does not have keyword [False] | has prefix [True]
+**output:** does not have keyword [False] | has prefix [True]
 
-input: ```slingshot --suggest h```
+**input:** ```slingshot --suggest h```
 
-ouput:
+**ouput:**
 
    does not have keyword [False] | has prefix [True]
 
