@@ -1,7 +1,13 @@
-# slingshot
-Submission for the Slingshot Challenge. Joshua Li, Upper Canada College G12 Student
+# Slingshot Trie Challenge
+I was given the task to create a trie system that is hosted online with a global state that supports multiple concurrent clients and the following operations
 
-## Thought Process
+1. Add keyword to trie
+2. Delete a keyword from trie
+3. Search for a keyword in trie [True/False]
+4. Return list of autocomplete suggestion based on an input prefix
+5. Display the trie
+
+## Inspirations
 
 The general data structure of Trie was inspired by this [video](https://www.youtube.com/watch?v=AXjmTQ8LEoI) (stopping before the Java implementation at the end)
 
