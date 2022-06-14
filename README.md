@@ -9,7 +9,7 @@ I was given the task to create a trie system over CLI that is hosted online with
 
 I satisfactorily completed such a task using Javascript and Firebase (Realtime Database). See readmeCLI.md and readMeServer.md to learn more
 
-The task was provided by Slingshot as part of their interview process to determine high-school interns (which will then placed at various companies)
+The task was provided by Slingshot as part of their interview process to determine high-school interns (which will then be placed at various companies)
 
 ## Inspirations
 
