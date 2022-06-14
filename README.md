@@ -1,5 +1,5 @@
 # Slingshot Trie Challenge
-I was given the task to create a trie system that is hosted online with a global state that supports multiple concurrent clients and the following operations
+I was given the task to create a trie system over CLI that is hosted online with a global state that supports multiple concurrent clients and the following operations
 
 1. Add keyword to trie
 2. Delete a keyword from trie
@@ -7,7 +7,7 @@ I was given the task to create a trie system that is hosted online with a global
 4. Return list of autocomplete suggestion based on an input prefix
 5. Display the trie
 
-I satisfactorily completed such a task. See readmeCLI.md and readMeServer.md to learn more
+I satisfactorily completed such a task using Javascript and Firebase (Realtime Database). See readmeCLI.md and readMeServer.md to learn more
 
 ## Inspirations
 
